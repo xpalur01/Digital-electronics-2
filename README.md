@@ -7,6 +7,5 @@ Nadpis | Nadpis
 řadek  | řádek
 
 
-[x] udelat tabulku
-
-[] udelat neco dalsiho
+- [x] udelat tabulku
+- [ ] udelat neco dalsiho
