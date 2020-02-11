@@ -14,8 +14,23 @@ SoP y A>B = AB’
 	
 SoP y A=B = A’B’ + AB
 	
-PoP y A<B = A’+B
+PoS y A<B = (A’+B’)*(A+B’)*(A+B)
 	
 //todo obalit to latexem
 	
 ### K mapy: 
+
+   | 0 | 1 | 
+   | :-: | :-: |
+   | 0 | 0 | 
+   
+   | 1 | 0 | 
+   | :-: | :-: |
+   | 0 | 1 | 
+   
+   | 0 | 0 | 
+   | :-: | :-: |
+   | 1 | 0 | 
+  
+
+PoS min, y A<B = (A+B’)
