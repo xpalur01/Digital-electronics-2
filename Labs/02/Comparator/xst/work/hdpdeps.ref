@@ -1,0 +1,8 @@
+V3 3
+FL /home/lab661/Documents/chadima/Digital-electronics-1/Labs/02/Comparator/top.vhd 2020/02/13.11:35:36 P.20131013
+EN work/top 1581590142 \
+      FL /home/lab661/Documents/chadima/Digital-electronics-1/Labs/02/Comparator/top.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/top/Behavioral 1581590143 \
+      FL /home/lab661/Documents/chadima/Digital-electronics-1/Labs/02/Comparator/top.vhd \
+      EN work/top 1581590142
