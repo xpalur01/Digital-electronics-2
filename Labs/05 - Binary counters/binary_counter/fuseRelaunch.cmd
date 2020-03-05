@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/lab661/Documents/chadima/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb_01_isim_beh.exe" -prj "/home/lab661/Documents/chadima/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb_01_beh.prj" "work.top_tb_01" 
