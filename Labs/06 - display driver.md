@@ -1,5 +1,5 @@
 
-(/06-display driver/wavedrom.png)
+(/Labs/wavedrom.png)
 
 ```
 {signal: [
