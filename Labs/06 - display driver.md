@@ -1,4 +1,4 @@
-
+![wavedrom.png](//Labs/wavedrom.png)
 !(/Labs/wavedrom.png)
 
 ```
