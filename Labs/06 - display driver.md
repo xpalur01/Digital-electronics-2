@@ -1,5 +1,4 @@
-![wavedrom.png](//Labs/wavedrom.png)
-!(/Labs/wavedrom.png)
+![wavedrom.png](/Labs/wavedrom.png)
 
 ```
 {signal: [
