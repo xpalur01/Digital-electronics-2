@@ -99,7 +99,7 @@ begin
             dp_i <= dp_o;
         when "01" =>
             -- WRITE YOUR CODE HERE
-			dig_o <= '1101;
+			dig_o <= '1101';
             data1i <= s_hex;
             dp_i <= dp_o;
         when "10" =>
