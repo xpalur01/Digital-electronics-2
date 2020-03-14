@@ -44,26 +44,30 @@ begin
     --------------------------------------------------------------------
     -- Sub-block of clock_enable entity. Create s_en signal.
     --- WRITE YOUR CODE HERE
-    CLOCK_ENABLE : entity work.clock_enable
-	 generic map (
-			g_NPERIOD => x"0028"
-	 )
-    port map (
 	 
-			clk_i => clk_i,
-			srst_n_i =>  srst_n_i,
-			clock_enable_o => s_en
-    );
-
-
+		 
+			CLOCK_ENABLE0 : entity work.clock_enable
+			
+					generic map (
+									 g_NPERIOD => x"0028"      									 
+														  
+										)
+					port map (
+									clk_i => clk_i, 
+									srst_n_i =>  srst_n_i, 
+									clock_enable_o => s_en
+				);
+												 
     --------------------------------------------------------------------
     -- Sub-block of hex_to_7seg entity
     --- WRITE YOUR CODE HERE
-    HEX2SSEG : entity work.hex_to_7seg
-    port map (
-		hex_i => s_hex,
-        seg_o => seg_o
-    );
+	 
+			HEX_TO_7SEG0 : entity work.hex_to_7seg
+				
+							port map (
+											hex_i => s_hex,
+											seg_o => seg_o	   									   												
+				);
 
 
     --------------------------------------------------------------------
@@ -76,11 +80,17 @@ begin
     begin
         if rising_edge(clk_i) then  -- Rising clock edge
             if srst_n_i = '0' then  -- Synchronous reset (active low)
+				
                 -- WRITE YOUR CODE HERE
-                s_cnt <= (others => '0');
+							s_cnt <= (others => '0');   -- Clear all bits              									
+											
+					 
+					 
             elsif s_en = '1' then
-                -- WRITE YOUR CODE HERE
-                s_cnt <= s_cnt + "01";
+				
+                -- WRITE YOUR CODE HERE																					
+							s_cnt <= s_cnt + "01";															
+												
             end if;
         end if;
     end process p_select_cnt;
@@ -94,24 +104,31 @@ begin
         case s_cnt is
         when "00" =>
             -- WRITE YOUR CODE HERE
-        	dig_o <= '1110';
-                dp_o <= dp_i(0);
+				s_hex <= data0_i;																		
+				dig_o <= "1110";															
+				dp_o <= dp_i(0);   
 
+				
         when "01" =>
             -- WRITE YOUR CODE HERE
-		dig_o <= '1101';
-           	 dp_o <= dp_i(1);
-		 
+				s_hex <= data1_i;															
+				dig_o <= "1101";															
+				dp_o <= dp_i(1);
+
+								
         when "10" =>
             -- WRITE YOUR CODE HERE
-            dig_o <= '1011';
-             dp_o <= dp_i(2);
-	     
+				s_hex <= data2_i;															
+				dig_o <= "1011";															
+				dp_o <= dp_i(2);
+
+				
         when others =>
             -- WRITE YOUR CODE HERE
-            dig_o <= '0111';
-	    dp_o <= dp_i(3);
-	    
+				s_hex <= data3_i;															
+				dig_o <= "0111";														
+				dp_o <= dp_i(3);
+
         end case;
     end process p_mux;
 
