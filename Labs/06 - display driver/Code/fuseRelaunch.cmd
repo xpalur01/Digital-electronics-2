@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -o "C:/Users/micha/OneDrive/Dokumenty/XilinxISE/DisplayDriver/driver_7seg_tb00_isim_beh.exe" -prj "C:/Users/micha/OneDrive/Dokumenty/XilinxISE/DisplayDriver/driver_7seg_tb00_beh.prj" "work.driver_7seg_tb00" 
