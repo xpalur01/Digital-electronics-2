@@ -19,7 +19,7 @@ use ieee.std_logic_unsigned.all;    -- Provides unsigned numerical computation
 entity clock is
 port (
     clk_i    : in  std_logic;
-    srst_n_i : in  std_logic;   -- Synchronous reset (active low)
+--    srst_n_i : in  std_logic;   -- Synchronous reset (active low)
 
     seg_o    : out std_logic_vector(7-1 downto 0);
     dig_o    : out std_logic_vector(4-1 downto 0)
@@ -31,12 +31,13 @@ end entity clock;
 ------------------------------------------------------------------------
 architecture Behavioral of clock is
     signal s_en  : std_logic;
+	signal s_srst_n : std_logic;
     signal s_hex : std_logic_vector(4-1 downto 0);
     signal s_cnt : std_logic_vector(4-1 downto 0) := "0000";
 	signal s_data0 : std_logic_vector(4-1 downto 0);
 	signal s_data1 : std_logic_vector(4-1 downto 0);
 	signal s_data2 : std_logic_vector(4-1 downto 0);
-	signal s_data4 : std_logic_vector(4-1 downto 0);
+	signal s_data3 : std_logic_vector(4-1 downto 0);
 begin
 
     --------------------------------------------------------------------
@@ -77,7 +78,7 @@ begin
     p_select_cnt : process (clk_i)
     begin
         if rising_edge(clk_i) then  -- Rising clock edge
-            if srst_n_i = '0' then  -- Synchronous reset (active low)
+            if s_srst_n = '0' then  -- Synchronous reset (active low)
 				
                 -- WRITE YOUR CODE HERE
 							s_cnt <= (others => '0');   -- Clear all bits              									
@@ -96,14 +97,14 @@ begin
     --------------------------------------------------------------------
     -- p_clock:
     --------------------------------------------------------------------
-    p_clock : process (s_cnt, data0_i, data1_i, data2_i, data3_i)
+    p_clock : process (s_cnt, s_data0, s_data1, s_data2, s_data3)
     begin
 		s_data0 <= s_cnt;
 		--dig_o <= "1110";	
 		--s_hex <= s_data0;			
         if s_cnt = "1001" then -- 9	
 			s_data1<= s_data1 + "0001";
-			srst_n_i <= '0';
+			s_srst_n <= '0';
 			dig_o <= "1110";	
 			s_hex <= s_data0;
 			if s_data1 = "1001" then
