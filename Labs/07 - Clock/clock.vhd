@@ -16,7 +16,7 @@ use ieee.std_logic_unsigned.all;    -- Provides unsigned numerical computation
 ------------------------------------------------------------------------
 -- Entity declaration for display driver
 ------------------------------------------------------------------------
-entity driver_7seg is
+entity clock is
 port (
     clk_i    : in  std_logic;
     srst_n_i : in  std_logic;   -- Synchronous reset (active low)
@@ -24,7 +24,7 @@ port (
     seg_o    : out std_logic_vector(7-1 downto 0);
     dig_o    : out std_logic_vector(4-1 downto 0)
 );
-end entity driver_7seg;
+end entity clock;
 
 ------------------------------------------------------------------------
 -- Architecture declaration for display driver
@@ -103,7 +103,7 @@ begin
 		--s_hex <= s_data0;			
         if s_cnt = "1001" then -- 9	
 			s_data1<= s_data1 + "0001";
-			srst_n_i <= '0'
+			srst_n_i <= '0';
 			dig_o <= "1110";	
 			s_hex <= s_data0;
 			if s_data1 = "1001" then
@@ -127,6 +127,6 @@ begin
 		end if;
 		
 		
-    end process p_mux;
+    end process p_clock;
 
 end architecture Behavioral;
