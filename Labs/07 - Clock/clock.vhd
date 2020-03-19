@@ -100,27 +100,27 @@ begin
     p_clock : process (s_cnt, s_data0, s_data1, s_data2, s_data3)
     begin
 		s_data0 <= s_cnt;
-		--dig_o <= "1110";	
-		--s_hex <= s_data0;			
+		dig_o <= "1110";	
+		s_hex <= s_data0;			
         if s_cnt = "1001" then -- 9	
 			s_data1<= s_data1 + "0001";
 			s_srst_n <= '0';
-			dig_o <= "1110";	
-			s_hex <= s_data0;
+			dig_o <= "1101";	
+			s_hex <= s_data1;
 			if s_data1 = "1001" then
 				s_data2<= s_data2 + "0001";
 				s_data1<= "0000";
-				dig_o <= "1101";	
-				s_hex <= s_data1;
+				dig_o <= "1011";	
+				s_hex <= s_data2;
 				if s_data2 = "1001" then
 					s_data3<= s_data3 + "0001";
 					s_data2<= "0000";
-					dig_o <= "1011";	
-					s_hex <= s_data2;
+					dig_o <= "0111";	
+					s_hex <= s_data3;
 					if s_data3 = "0110" then --6
 						s_data3<= "0000";
-						dig_o <= "0111";	
-						s_hex <= s_data3;
+						--dig_o <= "0111";	
+						--s_hex <= s_data3;
 						
 					end if;
 				end if;
