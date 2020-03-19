@@ -1,0 +1,11 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00_isim_beh.exe -prj C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00_beh.prj work.top_tb00 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/clock_enable.vhd" into library work
+Parsing VHDL file "C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00.vhd" into library work
+ERROR:HDLCompiler:69 - "C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00.vhd" Line 100: <en_i> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00.vhd" Line 102: <en_i> is not declared.
+ERROR:HDLCompiler:854 - "C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00.vhd" Line 38: Unit <behavior> ignored due to previous errors.
+VHDL file C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/top_tb00.vhd ignored due to errors
