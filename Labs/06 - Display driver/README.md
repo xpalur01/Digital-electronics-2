@@ -1,4 +1,4 @@
-![wavedrom.png](/Labs/06-Displaydriver/wavedrom.png)
+![wavedrom.png](/Labs/06-Displaydriver/wavedrom)
 
 ```
 {signal: [
