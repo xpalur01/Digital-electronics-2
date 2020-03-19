@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-05T10:37:46</DateModified>
+  <DateModified>2020-03-19T19:54:09</DateModified>
   <ModuleName>top</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/lab661/Documents/chadima/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/iseconfig/top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/lab661/Documents/chadima/Digital-electronics-1/Labs/05 - Binary counters/binary_counter</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2020-03-19T19:53:48</SummaryTimeStamp>
+  <SavedFilePath>C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter/iseconfig/top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/05 - Binary counters/binary_counter\</ImplementationReportsDirectory>
   <DateInitialized>2020-03-05T10:37:46</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
