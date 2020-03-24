@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/micha/OneDrive/Dokumenty/XilinxISE/Traffic_lights/traffic_light_tb00_isim_beh.exe" -prj "C:/Users/micha/OneDrive/Dokumenty/XilinxISE/Traffic_lights/traffic_light_tb00_beh.prj" "work.traffic_light_tb00" 
