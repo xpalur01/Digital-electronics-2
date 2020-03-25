@@ -5,9 +5,9 @@ entity traffic_lights_top is
 	port(
 			clk_i 	: in std_logic;
 			btn 	: in std_logic_vector(3 downto 3);
-			srst_n_i    : in std_logic; -- RESET
+			--srst_n_i    : in std_logic; -- RESET
 			
-			led    : out std_logic_vector(7 downto 2)
+			LD0    : out std_logic_vector(7 downto 2)
 			
 		  );
 		  
@@ -30,7 +30,7 @@ architecture traffic_lights_top of traffic_lights_top is
 				clk_i       : in std_logic; 
 				srst_n_i    : in std_logic; -- RESET
 			
-				lights      : out std_logic_vector(5 downto 0)		
+				lights_o      : out std_logic_vector(5 downto 0)		
 			  );
 			  
 	end component;
@@ -41,15 +41,15 @@ begin
 	
 	U1: clock_enable
 			port map( 
-						clk_i 		=> clk_i,
-						srst_n_i => srst_n_i,
+						clk_i 					=> clk_i,
+						srst_n_i 				=> srst_n_i,
 						clock_enable_o 		=> clock_enable_o					
 						);
 	U2: traffic
 			port map(
 						clk_i		 => clock_enable_o,
 						srst_n_i  => srst_n_i,
-						lights	 => led					
+						lights_o	 => LD0					
 						);
 						
 end traffic_lights_top;

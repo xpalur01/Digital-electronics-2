@@ -1,30 +1,3 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   17:14:18 03/24/2020
--- Design Name:   
--- Module Name:   C:/Users/micha/OneDrive/Dokumenty/XilinxISE/Traffic_lights/traffic_light_tb00.vhd
--- Project Name:  Traffic_lights
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: traffic
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
  
@@ -43,7 +16,7 @@ ARCHITECTURE behavior OF traffic_light_tb00 IS
     PORT(
          clk_i : IN  std_logic;
          srst_n_i : IN  std_logic;
-         lights : OUT  std_logic_vector(5 downto 0)
+         lights_o : OUT  std_logic_vector(5 downto 0)
         );
     END COMPONENT;
     
@@ -53,7 +26,7 @@ ARCHITECTURE behavior OF traffic_light_tb00 IS
    signal srst_n_i : std_logic := '0';
 
  	--Outputs
-   signal lights : std_logic_vector(5 downto 0);
+   signal lights_o : std_logic_vector(5 downto 0);
 
    -- Clock period definitions
    constant clk_i_period : time := 10 ns;
@@ -64,7 +37,7 @@ BEGIN
    uut: traffic PORT MAP (
           clk_i => clk_i,
           srst_n_i => srst_n_i,
-          lights => lights
+          lights_o => lights_o
         );
 
    -- Clock process definitions
