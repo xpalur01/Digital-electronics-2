@@ -6,5 +6,3 @@
 
 ## Znazornění stavů
 ![traffic_lights_stavy.jpg](/Labs/images/lab08_stavy.jpg)
-
-
