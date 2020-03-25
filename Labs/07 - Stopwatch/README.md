@@ -1,7 +1,7 @@
-## H2 Simulace
+## Simulace
 ![simulace_lab07.JPG](/Labs/images/simulace_lab07.JPG)
 
-## H2 Schéma
+## Schéma
 ![stopwatch_schema.png](/Labs/images/stopwatch_schema.png)
 
 
