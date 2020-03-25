@@ -16,7 +16,7 @@ end entity traffic;
 
 architecture traffic of traffic is
 
-    type state_type is (s0, s1, s2, s3, s4, s5);
+    type state_type is (s1c_s2z, s1c_s2o, s1c_s2c, s1z_s2c, s1o_s2c, s1c_s2c);
 	 signal state: state_type;
 	 
     --signal count: std_logic_vector(3 downto 0);
@@ -35,64 +35,64 @@ begin
 begin
 
 	if srst_n_i = '1' then
-			state <= s0;
+			state <= s1c_s2z;
 			count <= X"0";
 
         --elsif clk'event and clk = '1' then
         elsif rising_edge(clk_i) then
         
 		case state is
-			when s0 =>
+			when s1c_s2z =>
 					if count < SEC5 then
-							state <= s0;
+							state <= s1c_s2z;
 							count <= count +1;
 					else
-							state <= s1;
+							state <= s1c_s2o;
 							count <= "0000";
 					end if;			
 					
-							when s1 =>
+							when s1c_s2o =>
 									if count < SEC1 then
-											state <= s1;
+											state <= s1c_s2o;
 											count <= count +1;
 									else 
-											state <= s2;
+											state <= s1c_s2c;
 											count <= "0000";
 									end if;
 									
-											when s2 =>
+											when s1c_s2c =>
 													if count < SEC1 then
-															state <= s2;
+															state <= s1c_s2c;
 															count <= count +1;
 													else 
-															state <= s3;
+															state <= s1z_s2c;
 															count <= "0000";
 													end if;	
 
-															when s3 =>
+															when s1z_s2c =>
 																	if count < SEC5 then
-																			state <= s3;
+																			state <= s1z_s2c;
 																			count <= count +1;
 																	else 
-																			state <= s4;
+																			state <= s1o_s2c;
 																			count <= "0000";
 																	end if;	
 																	
-																			when s4 =>
+																			when s1o_s2c =>
 																					if count < SEC1 then
-																							state <= s4;
+																							state <= s1o_s2c;
 																							count <= count +1;
 																					else 
-																							state <= s5;
+																							state <= s1c_s2c;
 																							count <= "0000";
 																					end if;	
 																					
-																						when s5 =>
+																						when s1c_s2c =>
 																									if count < SEC1 then
-																											state <= s5;
+																											state <= s1c_s2c;
 																											count <= count +1;
 																									else 
-																											state <= s0;
+																											state <= s1c_s2z;
 																											count <= "0000";
 																									end if;
 																							
@@ -110,13 +110,13 @@ C2: process (state)
 begin
 		case state is
 		
-				when s0 => lights <= "100001";
-				when s1 => lights <= "100010";
-				when s2 => lights <= "100100";
-				when s3 => lights <= "001100";
-				when s4 => lights <= "010100";
-				when s5 => lights <= "100100";
-				when others => lights <= "100001";
+				when s1c_s2z => lights <= "100001";		--s0		bits: semafor1: red , orange , green semafor2: red, orange, green
+				when s1c_s2o => lights <= "100010";		--s1		s1z_s2o == semafor 1 zelená, semafor 2 oranžová
+				when s1c_s2c => lights <= "100100";		--s2
+				when s1z_s2c => lights <= "001100";		--s3
+				when s1o_s2c => lights <= "010100";		--s4
+				when s1c_s2c => lights <= "100100";		--s5
+				when others => lights <= "100001";		
 				
 		end case;
 	end process;
