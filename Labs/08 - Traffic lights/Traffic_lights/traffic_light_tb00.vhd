@@ -64,7 +64,13 @@ srst_n_i <= '0';
         wait until rising_edge(clk_i);	
         wait until rising_edge(clk_i);	
        
-     wait for clk_i_period*10;
+     wait for clk_i_period*40;
+	  wait until rising_edge(clk_i);	
+	  srst_n_i <= '1';
+	  wait until rising_edge(clk_i);	
+	  srst_n_i <= '0';
+	  wait until rising_edge(clk_i);	
+	  wait for clk_i_period*10;
 
       -- insert stimulus here 
 

@@ -1,0 +1,19 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o Z:/GIT/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights/traffic_light_tb00_isim_beh.exe -prj Z:/GIT/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights/traffic_light_tb00_beh.prj traffic_light_tb00 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Parsing VHDL file "Z:/GIT/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights/traffic_lights.vhd" into library work
+Parsing VHDL file "Z:/GIT/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights/traffic_light_tb00.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling architecture traffic of entity traffic [traffic_default]
+Compiling architecture behavior of entity traffic_light_tb00
+Time Resolution for simulation is 1ps.
+Compiled 6 VHDL Units
+Built simulation executable Z:/GIT/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights/traffic_light_tb00_isim_beh.exe
+Fuse Memory Usage: 35744 KB
+Fuse CPU Usage: 327 ms
