@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-03-25T17:09:38</DateModified>
+  <DateModified>2020-03-25T17:14:50</DateModified>
   <ModuleName>traffic_lights_top</ModuleName>
   <SummaryTimeStamp>2020-03-25T17:07:34</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/micha/OneDrive/Dokumenty/XilinxISE/TL2/iseconfig/traffic_lights_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/micha/OneDrive/Dokumenty/XilinxISE/TL2\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights/iseconfig/traffic_lights_top.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/micha/OneDrive/Dokumenty/GitHub/Digital-electronics-1/Labs/08 - Traffic lights/Traffic_lights\</ImplementationReportsDirectory>
   <DateInitialized>2020-03-24T16:55:26</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
